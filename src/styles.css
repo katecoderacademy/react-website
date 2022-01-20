@@ -1,0 +1,767 @@
+:root {
+  --primary-color: rgb(083, 029, 083);
+  --overlay-color: rgb(146, 086, 155);
+  --alt-color: rgb(168, 157, 168);
+  --button-edge: 1px solid black;
+  --heading-font: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --body-font: 'Exo 2','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* --background: url("../img/bg2.jpg"); */
+  --bbr: 5px;
+}    
+
+/* @font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?vwnikp');
+  src:  url('./fonts/icomoon.eot?vwnikp#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?vwnikp') format('truetype'),
+    url('./fonts/icomoon.woff?vwnikp') format('woff'),
+    url('./fonts/icomoon.svg?vwnikp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+} */
+
+/* exo-2-regular - latin */
+/* @font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/exo-2-v10-latin-regular.eot'); 
+  src: local(''),
+       url('./fonts/exo-2-v10-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/exo-2-v10-latin-regular.woff2') format('woff2'), 
+       url('./fonts/exo-2-v10-latin-regular.woff') format('woff'), 
+       url('./fonts/exo-2-v10-latin-regular.ttf') format('truetype'), 
+       url('./fonts/exo-2-v10-latin-regular.svg#Exo2') format('svg');
+} */
+/* exo-2-700 - latin */
+/* @font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/exo-2-v10-latin-700.eot'); 
+  src: local(''),
+       url('./fonts/exo-2-v10-latin-700.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/exo-2-v10-latin-700.woff2') format('woff2'),
+       url('./fonts/exo-2-v10-latin-700.woff') format('woff'), 
+       url('./fonts/exo-2-v10-latin-700.ttf') format('truetype'), 
+       url('./fonts/exo-2-v10-latin-700.svg#Exo2') format('svg'); 
+} */
+
+/* barlow-300 - latin */
+/* @font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/barlow-v5-latin-300.eot'); 
+  src: local(''),
+       url('./fonts/barlow-v5-latin-300.eot?#iefix') format('embedded-opentype'), 
+       url('./fonts/barlow-v5-latin-300.woff2') format('woff2'), 
+       url('./fonts/barlow-v5-latin-300.woff') format('woff'), 
+       url('./fonts/barlow-v5-latin-300.ttf') format('truetype'),
+       url('./fonts/barlow-v5-latin-300.svg#Barlow') format('svg'); 
+} */
+/* barlow-300italic - latin */
+/* @font-face {
+  font-family: 'Barlow';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./fonts/barlow-v5-latin-300italic.eot'); 
+  src: local(''),
+       url('./fonts/barlow-v5-latin-300italic.eot?#iefix') format('embedded-opentype'), 
+       url('./fonts/barlow-v5-latin-300italic.woff2') format('woff2'), 
+       url('./fonts/barlow-v5-latin-300italic.woff') format('woff'), 
+       url('./fonts/barlow-v5-latin-300italic.ttf') format('truetype'), 
+       url('./fonts/barlow-v5-latin-300italic.svg#Barlow') format('svg'); 
+} */
+/* barlow-regular - latin */
+/* @font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/barlow-v5-latin-regular.eot'); 
+  src: local(''),
+       url('./fonts/barlow-v5-latin-regular.eot?#iefix') format('embedded-opentype'), 
+       url('./fonts/barlow-v5-latin-regular.woff2') format('woff2'), 
+       url('./fonts/barlow-v5-latin-regular.woff') format('woff'), 
+       url('./fonts/barlow-v5-latin-regular.ttf') format('truetype'), 
+       url('./fonts/barlow-v5-latin-regular.svg#Barlow') format('svg'); 
+} */
+/* barlow-700 - latin
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/barlow-v5-latin-700.eot'); 
+  src: local(''),
+       url('./fonts/barlow-v5-latin-700.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/barlow-v5-latin-700.woff2') format('woff2'), 
+       url('./fonts/barlow-v5-latin-700.woff') format('woff'), 
+       url('./fonts/barlow-v5-latin-700.ttf') format('truetype'), 
+       url('./fonts/barlow-v5-latin-700.svg#Barlow') format('svg');
+} */
+
+@keyframes fadein {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+@keyframes slidein {
+  0% {-webkit-transform: translateY(85px);}   
+  100% {-webkit-transform: translateY(0);}
+}
+
+@-moz-keyframes slidein {
+  0% {-webkit-transform: translateY(85px);}   
+  100% {-webkit-transform: translateY(0);}
+}
+
+@-webkit-keyframes slidein {
+  0% {-webkit-transform: translateY(85px);}   
+  100% {-webkit-transform: translateY(0);}
+}
+
+@-o-keyframes slidein {
+  0% {-webkit-transform: translateY(85px);}   
+  100% {-webkit-transform: translateY(0);}
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    min-height: 100%;
+    /* background: url("../img/ms-dos-ibm-pc-outline.png") right no-repeat, var(--background); */
+    font-family: var(--body-font);
+    background-size: contain, auto;
+
+}
+
+li {
+  margin-left: 2em;
+}
+
+
+
+html { 
+  height: auto;
+  min-height: 100%;
+
+}
+
+#summary {
+  font-family: var(--body-font);
+  font-style: italic;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    text-align: center;
+    } 
+
+h2, h3 {
+  line-height: 2.5em;
+}
+
+/* general element to center*/
+.centerme {
+  margin: 1em auto;
+  display: block;
+
+}
+
+
+    /*determines main page layout - a single unscrollable box - 1c 2r top auto bottom is 85px high*/
+.container {
+  display: flex;
+  background-size: cover; 
+  height: 100vh;
+  width: 100vw;
+  min-height: 3000px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/*a piece of CSS Grid whitespace - 85px tall - to resolve issues with Safari. CSS instructs to not read aloud-->*/
+ .emptygrid
+  {
+    display:grid;
+    height:85px;
+    width:100vw;
+    speak: never;
+  }
+
+  /*buttons*/
+  .btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 1em 1.3em;
+    font-size: 1em;
+    cursor: pointer;
+    width:50vw;
+    display: block;
+    border-radius: var(--bbr);
+    text-align: center;
+    animation: slidein linear 1s;
+    -webkit-animation: slidein linear 1s;
+    -moz-animation: slidein linear 1s;
+    -o-animation: slidein linear 1s;
+    -ms-animation: slidein linear 1s;
+  }
+  
+  .btn:hover {
+    background-color: var(--overlay-color);
+
+  }
+  
+  #resumebtn {
+    color: var(--primary-color);
+    background-color: var(--alt-color);
+    margin: 1em auto;
+    animation: fadeIn linear 3s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+  }
+  
+  #resumebtn:hover {
+    color: var(--primary-color);
+    background-color: var(--overlay-color);
+  }
+
+
+/* page content container */
+  .maincontainer {
+    width: 100vw;
+    color: #fff;
+    height:  100vh;
+    position: absolute; 
+    gap: 1rem 1rem;
+    margin: 0 auto;
+    max-height: 3000px;
+    overflow: scroll;
+    margin: auto;
+      }   
+  
+/* main style for most text inc headers*/
+.maintext { 
+    display: grid;
+    justify-self: center;
+    color: #fff;
+    align-items: start;
+    background: rgba(42, 42, 42, 0.6);
+    margin: 3rem auto 2.5rem;
+    border: 2em solid transparent;
+    z-index: -1;
+    width: 90%;
+    border-radius: var(--bbr);
+    line-height: 1.3em;
+    animation: fadeIn linear 3s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+    }
+
+    /* styles for project page*/
+    .projectsgrid img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--bbr);
+        }
+  
+    .projectsgrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 10vh;
+      justify-self: center;
+      color: #fff;
+      align-items: start;
+      margin-top: 0;
+      padding-top:0;
+      z-index: -1;
+  }
+        
+  .projectsgrid div {
+      display: grid;
+      justify-self: center;
+      color: #fff;
+      align-items: start;
+      background: rgba(42, 42, 42, 0.6);
+      margin: 2rem 2.5rem 0.5rem;
+      border: 2em solid transparent;
+      z-index: -1;
+
+      }
+  
+      .projecttext { 
+        display: grid;
+        justify-self: center;
+        color: #fff;
+        align-items: start;
+        background: rgba(42, 42, 42, 0.6);
+        margin: 2rem 2.5rem 0.5rem;
+        border: 2em solid transparent;
+        z-index: 0;
+        border-radius: var(--bbr);
+        line-height: 1.3em;
+        animation: fadeIn linear 3s;
+        -webkit-animation: fadeIn linear 3s;
+        -moz-animation: fadeIn linear 3s;
+        -o-animation: fadeIn linear 3s;
+        -ms-animation: fadeIn linear 3s;
+             }
+
+
+   /*footer area */
+
+    .footerlinks {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    padding:1em;
+    width: 100vw;
+    background-color: #fff;
+    font-family: var(--body-font);
+    z-index: 10;
+
+    }
+
+.footer p {
+    font-family: var(--body-font);
+    display: flex;
+    padding: 1em;
+    background-color: #fff;
+    }
+
+/*styles for blog*/
+ .blogauthor {
+   font-style:italic;
+  text-align: right;
+  line-height: 2em;
+ }
+
+ .blogtext {
+   line-height: 1.3em;
+   text-align: justify;
+ }
+ 
+ figcaption {
+  background-color: rgba(42, 42, 42, 0.4);
+  color: white;
+  padding: 1em;
+  text-align: center;
+  border-radius: var(--bbr);
+}
+
+figure {
+  padding: 1.3em 0 1.3em 0;
+}
+
+.figimgl {
+  overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    float: left;
+    border-radius: var(--bbr);
+}
+
+.figimgr {
+overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+  float: right;
+  border-radius: var(--bbr);
+
+}
+
+/*Form styles */
+input[type=text], select, textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+    border: var(--button-edge);
+    border-radius: var(--bbr);
+    width: 100%
+  }
+
+
+  input[type=button], input[type=submit] {
+    background-color: var(--alt-color);
+    border: none;
+    color: var(--primary-color);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 10px 0;
+    border-radius: var(--bbr);
+    font-size: 1.5em;
+    width: 100%
+    }
+    
+    input[type=submit]:hover {
+    background-color: var(--overlay-color);
+    }
+
+
+
+
+ .contactform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content:center;
+    text-align: center;
+  }
+  label {
+    padding: 12px 12px 2px 0;
+    display: inline-block;
+    font-family: var(--body-font);
+  }
+
+
+/*icons*/
+a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+  color:rgb(143, 138, 138);
+}
+.icon:any-link {
+text-decoration: none;
+}
+
+.icon:hover {
+color: var(--overlay-color);
+}
+
+.icon
+{
+text-decoration: none;
+color: var(--primary-color);
+animation: slidein linear 1s;
+-webkit-animation: slidein linear 1s;
+-moz-animation: slidein linear 1s;
+-o-animation: slidein linear 1s;
+-ms-animation: slidein linear 1s;
+display:block;
+}
+
+.icon-inline
+{
+text-decoration: none;
+color: var(--alt-color);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-email:before {
+content: "\e901";
+}
+.icon-blog:before {
+content: "\e904";
+}
+.icon-project2:before {
+content: "\e905";
+}
+.icon-cogwheel-3034651:before {
+content: "\e900";
+}
+.icon-home-146585:before {
+content: "\e902";
+}
+.icon-person-1824147:before {
+content: "\e903";
+}
+.icon-stack-overflow:before {
+content: "\e906";
+}
+.icon-linkedin-in:before {
+content: "\e907";
+}
+.icon-github:before {
+content: "\e908";
+}
+
+
+
+.iconsmain {
+  display:flex;
+  margin: auto;
+  justify-content:space-around;
+  padding: 0.5em 0 0.5em 0;
+}
+
+/*screen adjustments for desktop*/
+@media screen and (min-width: 1024px) {
+
+  .btn {
+    width:15vw;
+  }
+
+  .contactform {
+    display: Grid;
+    grid-template-columns: 200px 1fr;
+    width: 100%;
+    grid-gap: 16px;
+  }
+  
+  label {
+    grid-column: 1 / 2;
+    text-align: right;
+  }
+
+  input {
+    grid-column: 2 / 3;
+  }
+
+    .container {
+        overflow: hidden;
+        
+        position:absolute;
+        width: 100%
+    }
+    
+    .aboutblocks {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      width: 100%;
+      column-gap: 3em;
+      }    
+
+
+    .aboutblocks img {
+      width:50%;
+      border-radius: var(--bbr);
+      margin: auto;
+      display: block;
+    } 
+
+   .aboutblocks1 {
+      grid-column: 1 / 2;
+    }
+
+    .aboutblocks2 {
+      grid-column: 2 / 3;
+    }
+
+    .maincontainer { 
+        overflow: auto;
+        gap: 1rem 1rem;
+        margin: 0 auto;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        min-height: 0;
+     }
+
+    .maintext {
+        max-width: 1000px;
+        width: 65vw;
+        line-height: 1.4em;
+      
+      }
+
+        .projectsgrid {
+        grid-template-rows: [row1-start] 30vw [row1-end];
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 10vh;
+        margin: auto;
+        width: 90%;
+  }
+   
+  #summary {
+    font-size: 1.4em;
+    line-height: 2em;
+   }
+  
+   /*to hide items on desktop view*/
+  .hidedesktop {
+  display: none;
+          }
+  .icon {
+  font-size: 3em;
+        }
+  
+  .icon-inline {
+  font-size: 3em;
+      }
+
+    }
+/*screen adjustments for Tablet*/
+@media screen and (min-width: 650px) and (max-width:1023px) {
+  .aboutblocks img {
+    width:100%;
+    border-radius: var(--bbr);
+    margin: auto;
+    display: block;
+    align-self: center;
+  } 
+
+  #summary {
+    padding:2em;
+    font-size: 1.1em;
+    line-height: 1.4em;
+
+  }
+  .maincontainer {
+    overflow: auto;
+    gap: 1rem 1rem;
+    margin: 0 auto;
+    align-content: center;
+    align-items: center;
+    justify-content: end;
+    position:absolute;
+    min-width: 0;
+    min-height: 0;
+    }
+  .maintext {
+    width: 80vw;
+    margin: 1.5rem auto 2.5rem;
+    line-height: 1.6em;
+    padding: 2em;
+    }
+
+    .text{
+        width: 90%;
+        }
+    .hidemobile {
+            display: none;
+        }
+    .icon {
+            font-size: 3.3em;
+        }
+        .icon-inline {
+          font-size: 2em;
+          padding-top: 2em;
+      }
+
+  .iconsmain {
+    padding: 1em;
+  }
+  
+  .projectsgrid {
+          display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        justify-self: center;
+        color: #fff;
+        align-items: start;
+        margin: 2rem auto 0.5rem;
+        border: 2em solid transparent;
+        z-index: 0;
+        width: 100%;
+        margin-top: 0;
+        border-top: 0;
+        min-width: 0
+    }
+  }
+
+  /*screen adjustments for mobile targetting about page and icons*/
+  @media screen and (max-width:650px ){
+    .hidemobile {
+        display: none;
+    }
+    .icon {
+        font-size: 11vw;
+        
+    }
+    .icon-inline {
+      font-size: 11vw;
+      
+  }
+    #envelope {
+        font-size:9vw;
+    }
+    
+    .footerlinks {
+        justify-content:space-between;
+    }
+    .aboutblocks {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: auto;
+    grid-auto-flow: row;
+  }    
+
+  .aboutblocks1 {
+  grid-row: 1 / 2;
+  display: block;
+  margin:auto;
+  }
+
+  .aboutblocks2 {
+    grid-row: 2 / 3;
+    display: block;
+    margin:auto;
+  }
+
+  .aboutblocks img {
+    border-radius: var(--bbr);
+    width: 50vw;
+    margin: auto;
+    display: block;
+    align-self: center;
+  } 
+}
+
