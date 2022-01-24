@@ -148,20 +148,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+
+/* body {
     overflow: hidden;
     min-height: 100%;
-    /* background: url("../img/ms-dos-ibm-pc-outline.png") right no-repeat, var(--background); */
+    background: url("../img/ms-dos-ibm-pc-outline.png") right no-repeat, var(--background);
     font-family: var(--body-font);
     background-size: contain, auto;
 
-}
+} */
 
 li {
   margin-left: 2em;
 }
-
-
 
 html { 
   height: auto;
@@ -185,17 +184,15 @@ h1, h2, h3 {
     text-align: center;
     } 
 
-h2, h3 {
+/* h2, h3 {
   line-height: 2.5em;
-}
+} */
 
 /* general element to center*/
 .centerme {
   margin: 1em auto;
   display: block;
-
 }
-
 
     /*determines main page layout - a single unscrollable box - 1c 2r top auto bottom is 85px high*/
 .container {
@@ -221,7 +218,7 @@ h2, h3 {
   .btn {
     background-color: var(--primary-color);
     border: none;
-    color: white;
+    /* color: white; */
     padding: 1em 1.3em;
     font-size: 1em;
     cursor: pointer;
@@ -301,9 +298,9 @@ h2, h3 {
     .projectsgrid {
       display: grid;
       grid-template-columns: 1fr;
-      row-gap: 10vh;
+      row-gap: 1vh;
       justify-self: center;
-      color: #fff;
+      /* color: #fff; */
       align-items: start;
       margin-top: 0;
       padding-top:0;
@@ -325,7 +322,7 @@ h2, h3 {
       .projecttext { 
         display: grid;
         justify-self: center;
-        color: #fff;
+        /* color: #fff; */
         align-items: start;
         background: rgba(42, 42, 42, 0.6);
         margin: 2rem 2.5rem 0.5rem;
@@ -353,7 +350,7 @@ h2, h3 {
     align-items: center;
     padding:1em;
     width: 100vw;
-    background-color: #fff;
+    /* background-color: #fff; */
     font-family: var(--body-font);
     z-index: 10;
 
@@ -363,7 +360,7 @@ h2, h3 {
     font-family: var(--body-font);
     display: flex;
     padding: 1em;
-    background-color: #fff;
+    /* background-color: #fff; */
     }
 
 /*styles for blog*/
@@ -380,7 +377,7 @@ h2, h3 {
  
  figcaption {
   background-color: rgba(42, 42, 42, 0.4);
-  color: white;
+  /* color: white; */
   padding: 1em;
   text-align: center;
   border-radius: var(--bbr);
@@ -459,12 +456,12 @@ input[type=text], select, textarea {
 /*icons*/
 a:link {
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
 }
 
 a:visited {
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
 }
 
 a:hover {
@@ -623,7 +620,7 @@ content: "\e908";
         .projectsgrid {
         grid-template-rows: [row1-start] 30vw [row1-end];
         grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 10vh;
+        row-gap: 2vh;
         margin: auto;
         width: 90%;
   }
@@ -704,7 +701,7 @@ content: "\e908";
         grid-template-columns: 1fr 1fr;
         row-gap: 30px;
         justify-self: center;
-        color: #fff;
+        /* color: #fff; */
         align-items: start;
         margin: 2rem auto 0.5rem;
         border: 2em solid transparent;
