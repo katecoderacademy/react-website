@@ -12,9 +12,6 @@ import { Outlet, Link } from 'react-router-dom';
     );
   };
 
-
-
-  
 // function aboutKate () {
 //   return (
 //     <><section class="maintext">
@@ -55,18 +52,13 @@ function App() {
     <div>
         <HomePageHeader />
         <Outlet />
-      <nav style={{ borderTop: 'solid 1px', paddingBottom: '1rem' }}>
+      <nav className='nav-style' style={{ borderTop: 'solid 1px', paddingBottom: '1rem' }}>
       
       <Link to="/home">Home</Link> |{' '}
         <Link to="/blog">Blog</Link> |{' '}
         <Link to="/projects">Projects</Link> |{' '}
         <Link to="/contact">Contact</Link>
       </nav>
-      
-    
-      
-
-
 
     </div>
   );

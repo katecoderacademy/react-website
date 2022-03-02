@@ -6,7 +6,7 @@ import Blog from './routes/blog';
 import Projects from './routes/projects';
 import Home from './routes/home';
 import Contact from './routes/contact';
-import Blogpost from './routes/blogpost';
+import Blogpost from './routes/BlogDetails';
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
