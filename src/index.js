@@ -6,7 +6,9 @@ import Blog from './routes/blog';
 import Projects from './routes/projects';
 import Home from './routes/home';
 import Contact from './routes/contact';
-import Blogpost from './routes/BlogDetails';
+import BlogDetails from './routes/BlogDetails';
+import Blogpost from './routes/BlogList';
+import Create from './routes/create';
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -18,6 +20,9 @@ ReactDOM.render(
         <Route path="home" element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path=":blogpostId" element={<Blogpost />} />
+        <Route path="/create" element={<Create />} />
+        <Route path="/blogs/:id" element={<BlogDetails />} />
+              
         <Route
       path="*"
       element={
